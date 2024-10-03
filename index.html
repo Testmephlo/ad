@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs="sourceType: webcam; videoTexture: true;" vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true; antialias: true; alpha: true;">
+      <a-assets>
+        <a-asset-item id="myModel-obj" src="rtest1.obj"></a-asset-item>
+      </a-assets>
+
+      <a-obj-model 
+        src="#myModel-obj" 
+        position="-95 -75 -70" 
+        scale="0.8 0.8 0.8" 
+        rotation="270 0 0">
+      </a-obj-model>
+      <a-marker-camera preset="hiro"></a-marker-camera>
+    </a-scene>
+  </body>
+</html>
